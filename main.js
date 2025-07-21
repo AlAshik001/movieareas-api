@@ -1,35 +1,16 @@
 import express from "express"
+import movieRoutes from "./routes/movies.route.js"
 const app =  express()
 const port = 3000
 
 app.get("/", (req,res) =>{
-    res.json({msg: "Hello Studends"})
+    res.json({msg: "Hello Studends !!"})
 })
-
 
 
 // CURD functionality of movies
 
-// R- for Reading
-app.get('/movie', ()=>{
-
-})
-
-// C-for creating movies
-
-app.post('movies',()=>{
-
-})
-
-// U- for updating movies
-app.put('/movies/:id', ()=>{
-
-})
-
-// D- for deleting movies
-app.delete('/movies/:id', ()=>{
-
-})
+app.use('/movies',movieRoutes)
 
 
 app.listen(port, ()=>{
