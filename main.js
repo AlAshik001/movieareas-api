@@ -9,8 +9,10 @@ app.get("/", (req,res) =>{
 })
 
 
+// Data Understanding Middelware 
 
-// CURD functionality of movies
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 // Connect DB Function
 

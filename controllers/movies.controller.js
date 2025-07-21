@@ -1,3 +1,6 @@
+
+
+// CURD functionality of movies
 // MVC pattern called Module View Controllers
 
 export const MovieIndex =  (req,res)=>{
@@ -5,7 +8,11 @@ export const MovieIndex =  (req,res)=>{
 }
 
 export const MovieCreate = (req,res)=>{
-    res.send("Create a movies");
+    // id, title , descr
+        console.log(req.body)
+
+        return res.json(req.body)
+    // create the movie info 
 }
 
 export const MovieUpdate =  (req,res)=>{
