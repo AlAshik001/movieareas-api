@@ -8,6 +8,7 @@ app.get("/", (req,res) =>{
 })
 
 
+
 // CURD functionality of movies
 
 app.use('/movies',movieRoutes)
