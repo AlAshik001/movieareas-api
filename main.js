@@ -1,5 +1,6 @@
 import express from "express"
 import movieRoutes from "./routes/movies.route.js"
+import connectDB from "./lib/db.js"
 const app =  express()
 const port = 3000
 
@@ -10,6 +11,10 @@ app.get("/", (req,res) =>{
 
 
 // CURD functionality of movies
+
+// Connect DB Function
+
+connectDB()
 
 app.use('/movies',movieRoutes)
 
